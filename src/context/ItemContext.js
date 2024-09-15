@@ -41,7 +41,7 @@ export function ItemProvider({ children }) {
                         (a, b) => new Date(b.CREATED_TIME) - new Date(a.CREATED_TIME)
                     );
                     const slicedData = sortList.slice(0, 22);
-                    setList(slicedData); // Set only 5 items in the state
+                    setList(slicedData);
                 }
             })
             .catch((error) => {
@@ -123,7 +123,7 @@ export function ItemProvider({ children }) {
                         );
                         setInputValue("");
                         seteditingId(null);
-                        setEditingItem('')
+                        setEditingItem("");
                     }
                 })
                 .catch((error) => {
@@ -157,8 +157,6 @@ export function ItemProvider({ children }) {
                 console.error("Axios error:", error);
             });
     }
-
-
 
     const value = {
         list,

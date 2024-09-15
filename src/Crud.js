@@ -1,5 +1,5 @@
-import { useItems } from './context/ItemContext';
-import List from './List';
+import { useItems } from "./context/ItemContext";
+import List from "./List";
 
 function Crud() {
     const {
@@ -13,30 +13,30 @@ function Crud() {
         handleUpdate,
     } = useItems();
 
-
-
-
     return (
         <>
-            <div className='box'>
-                <h1 className='title'>CRUD</h1>
-                <div className='newinput'>
+            <div className="box">
+                <h1 className="title">CRUD</h1>
+                <div className="newinput">
                     <input
                         type="text"
                         value={inputValue}
                         onChange={handleInputChange}
-                        placeholder='Enter here'
+                        placeholder="Enter here"
                     />
-                    <button className={`${editingItem ? 'editBtn' : 'addBtn'} `} onClick={editingItem ? handleUpdate : handleAdd}>
-                        {editingItem ? 'Update' : 'Add'} +
+                    <button
+                        className={`${editingItem ? "editBtn" : "addBtn"} `}
+                        onClick={editingItem ? handleUpdate : handleAdd}
+                    >
+                        {editingItem ? "Update" : "Add"} +
                     </button>
                 </div>
             </div>
-            <div className='cardBox'>
+            <div className="cardBox">
                 <List list={list} handleEdit={handleEdit} handleDelete={handleDelete} />
             </div>
         </>
-    )
+    );
 }
 
-export default Crud
+export default Crud;
