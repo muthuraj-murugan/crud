@@ -1,38 +1,117 @@
-.App {
+.box {
+  width: 60%;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.newinput {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  padding: 0 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.newinput input {
+  padding: 20px 30px;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  width: 50%;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.newinput input:focus {
+  outline: none;
+}
+
+.newinput .editBtn {
+  background-color: rgb(210, 39, 39) !important;
+  border: none;
+  color: #fff;
+}
+.newinput button {
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(19, 89, 113);
+  background-color: #fff;
+  border: 1px solid rgb(19, 89, 113);
+}
+
+.newinput button:hover {
+  background-color: rgb(19, 89, 113);
+  color: #fff;
+  transition: 0.5s;
+}
+
+.cardBox {
+  padding: 20px 50px;
+  margin-top: 1rem;
+}
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: auto;
+  margin-top: 1rem;
+  width: 92%;
+}
+
+.cardList .listBox {
+  border-radius: 50px;
+  padding: 25px 20px;
+  text-align: center;
+  width: 190px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
+
+.cardList .listBox .btnBox button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cardList .btnBox .editBtn {
+  color: rgb(21, 115, 187);
+}
+.cardList .btnBox .deleteBtn {
+  color: red;
+}
+
+.cardList .listBox .btnBox {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .cardList {
+    width: 100%;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .listBox {
+    width: 100% !important;
+  }
+  .box {
+    width: 100% !important;
+  }
+  .newinput input {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .cardList {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1164px) {
+  .cardList {
+    justify-content: space-around;
   }
 }
